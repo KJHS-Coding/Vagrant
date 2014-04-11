@@ -2,18 +2,20 @@
 
 If you like Linux, and want to learn more about Linux operating systems,
 then you should explore [Vagrant](http://en.wikipedia.org/wiki/Vagrant_(software)).
-The [documentatation](http://docs.vagrantup.com/v2/) is a little bit challenging.
+The [documentatation](http://docs.vagrantup.com/v2/) is hard at first, but complete.
 Vagrant allows you to run virtual operating systems on your computer (the "host")
 that you can _provision_ any way you see fit.  In modern web development,
 environments get extremely complex.  Vagrant allows you to quickly and easily
 set up development environments.  If you break something, or want to start over
-fresh for any reason, it is a piece of cake.
+fresh for any reason, it is a piece of cake. Ever wanted to know what happens
+when you `rm -rf /*`, but were too afraid to try it in real life?  Try it in
+a vagrantbox with no risk!
 
 ## Terminology
 When running a [virtual machine](http://en.wikipedia.org/wiki/Virtual_machine)
 your computer hardware and operating system are referred to as the 
-[__host__](http://en.wikipedia.org/wiki/Host_machine) while the virtual operating
-system is referred to as the __guest__.  To 
+[_host_](http://en.wikipedia.org/wiki/Host_machine) while the virtual operating
+system is referred to as the _guest_.  To 
 [provision](http://en.wikipedia.org/wiki/Provisioning#Server_provisioning) a server
 or operating system is to install all of the necessary software and any other setup
 required to do the necessary
@@ -30,7 +32,7 @@ To get started, you need to download/install
 [Vagrant](http://www.vagrantup.com/downloads.html).  If you think you want to go
 into web design, this is a very useful topic to explore.
 
-### Recommended Plugins
+#### Recommended Plugins
 Vagrant has some plugins that make using the software even better.  You should
 install [vagrant-pristine](https://github.com/fgrehm/vagrant-pristine) which is a very simple
 plugin that combines the destroying and re-provisioning of a box in one command,
@@ -39,13 +41,19 @@ plugin that combines the destroying and re-provisioning of a box in one command,
 you download during 
 [provisioning](http://en.wikipedia.org/wiki/Provisioning#Server_provisioning) for
 use in subsequent `vagrant up`s.  Basically, this makes the process of starting over 
-fresh __much faster__.  The third and final plugin that is recommended here is
+fresh _much faster_.  The third and final plugin that is recommended here is
 [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).  "Guest Additions"
 are software that get installed on the guest so that it will play nice with the host.
 Since vagrant and virtualbox are two different pieces of software, they do not always
 synchronize perfectly.  This plugin makes them cooperate automatically.
 
-### 
+#### Host Resources
+Running a virtual machine takes disk space.  You should keep track of how many
+virtual boxes you are running (whether shut-down or not) and delete unused boxes.
+You can always `vagrant up` again later.  The boxes in these demos take about 1-2 Gb
+each.  Running virtual machines also takes cpu and memory resources from the host.
+It is not recommended to run multiple virtual machines at the same time, unless you
+have a whole lot of cpu and memory to spare.
 
 ## Using Vagrant and this Repo
 To use this repository, simpy `cd` into one of the directories you are interested in
