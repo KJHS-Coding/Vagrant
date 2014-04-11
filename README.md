@@ -32,14 +32,18 @@ into web design, this is a very useful topic to explore.
 
 ### Recommended Plugins
 Vagrant has some plugins that make using the software even better.  You should
-install [vagrant-pristine](github.com/fgrehm/vagrant-pristine) which is a very simple
+install [vagrant-pristine](https://github.com/fgrehm/vagrant-pristine) which is a very simple
 plugin that combines the destroying and re-provisioning of a box in one command,
 `vagrant pristine`.  The second plugin you should install is
-[vagrant-cachier](github.com/fgrehm/vagrant-cachier).  This plugin saves data that
+[vagrant-cachier](https://github.com/fgrehm/vagrant-cachier).  This plugin saves data that
 you download during 
 [provisioning](http://en.wikipedia.org/wiki/Provisioning#Server_provisioning) for
 use in subsequent `vagrant up`s.  Basically, this makes the process of starting over 
-fresh __much faster__.
+fresh __much faster__.  The third and final plugin that is recommended here is
+[vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).  "Guest Additions"
+are software that get installed on the guest so that it will play nice with the host.
+Since vagrant and virtualbox are two different pieces of software, they do not always
+synchronize perfectly.  This plugin makes them cooperate automatically.
 
 ### 
 
