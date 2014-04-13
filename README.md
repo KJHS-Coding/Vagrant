@@ -20,10 +20,11 @@ system is referred to as the _guest_.  To
 or operating system is to install all of the necessary software and any other setup
 required to do the necessary
 [development](http://en.wikipedia.org/wiki/Software_development).
-This is really the whole point of using a tool like vagrant.  The `Vagrantfile`s
-specify the specifics of the guest which will run on your host machine.  Your
+This is really the whole point of using a tool like vagrant.  The `Vagrantfile`
+specifies the setup of the guest which will run on your host machine.  Your
 development environment then becomes entirely "disposable" and you can start over
-fresh in very little time.  You can install only what you need and keep it separate
+fresh in very little time.  You don't have to keep track of what has and has not
+been installed, you can install only what you need and keep it separate
 from other projects.
 
 ## Setup
@@ -56,7 +57,8 @@ It is not recommended to run multiple virtual machines at the same time, unless 
 have a whole lot of cpu and memory to spare.
 
 ## Using Vagrant and this Repo
-To use this repository, simpy `cd` into one of the directories you are interested in
-and execute `vagrant up`.  This will provision your box.  That is, run the virtual
-operating system and any setup scripts that are included.  It is very worthwhile to
-read through the install scripts to see how things are done.
+To use this repository, install Virtualbox and Vagrant, then simply clone and `cd` 
+into one of the directories you are interested in and execute `vagrant up`.  This 
+will provision your box.  That is, run the virtual operating system and any setup 
+scripts that are included.  It is very worthwhile to read through the install scripts
+ to see how things are done.
