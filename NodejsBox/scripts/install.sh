@@ -30,16 +30,13 @@ mysqladmin -u root password $mysqlTempPass
 sudo mysql -u root --password=$mysqlTempPass < ./scripts/mysql/schema.sql
 
 #Node
-sudo apt-get -y install python-software-properties
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get -y update
-sudo apt-get -y install nodejs nodejs-dev npm
-#NODEJS_MAJOR_VERSION=0.10
-#sudo -u vagrant git clone git://github.com/creationix/nvm.git ~vagrant/nvm
-#echo '. ~/nvm/nvm.sh' | tee -a ~vagrant/.profile
-#source ~vagrant/nvm/nvm.sh
-#nvm install v0.10
-#
-#echo "nvm use $NODEJS_MAJOR_VERSION" | tee -a ~vagrant/.profile
-#source ~vagrant/nvm/nvm.sh
-#nvm use $NODEJS_MAJOR_VERSION
+NODEJS_VERSION=0.10
+git clone git://github.com/creationix/nvm.git ~vagrant/.nvm
+echo $'\n\n#nodejs nvm' | sudo tee -a ~vagrant/.profile
+echo 'source ~vagrant/.nvm/nvm.sh' | sudo tee -a ~vagrant/.profile
+source ~vagrant/.nvm/nvm.sh
+nvm install $NODEJS_VERSION 
+echo "nvm use $NODEJS_VERSION" | sudo tee -a ~vagrant/.profile
+nvm use $NODEJS_MAJOR_VERSION
+
+
