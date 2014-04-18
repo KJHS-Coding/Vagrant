@@ -10,6 +10,10 @@ then
     # directory so that your work is easily visible/accessible from the host.
     cd /vagrant
     echo "cd /vagrant" | sudo tee -a ~vagrant/.profile
+
+    # For nvm installation below
+    HOMEDIR = '~vagrant'
+
 else
     # If you are actually deploying this on a server somewhere, then here is
     # where you should set up the server directories
@@ -31,12 +35,12 @@ sudo mysql -u root --password=$mysqlTempPass < ./scripts/mysql/schema.sql
 
 #Node
 NODEJS_VERSION=0.10
-git clone git://github.com/creationix/nvm.git ~vagrant/.nvm
-echo $'\n\n#nodejs nvm' | sudo tee -a ~vagrant/.profile
-echo 'source ~vagrant/.nvm/nvm.sh' | sudo tee -a ~vagrant/.profile
-source ~vagrant/.nvm/nvm.sh
+git clone git://github.com/creationix/nvm.git $HOMEDIR/.nvm
+echo $'\n\n#nodejs nvm' | sudo tee -a $HOMEDIR/.profile
+echo "source $HOMEDIR/.nvm/nvm.sh" | sudo tee -a $HOMEDIR/.profile
+source $HOMEDIR/.nvm/nvm.sh
 nvm install $NODEJS_VERSION 
-echo "nvm use $NODEJS_VERSION" | sudo tee -a ~vagrant/.profile
+echo "nvm use $NODEJS_VERSION" | sudo tee -a $HOMEDIR/.profile
 nvm use $NODEJS_MAJOR_VERSION
 
 
