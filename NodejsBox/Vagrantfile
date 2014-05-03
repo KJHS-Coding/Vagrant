@@ -1,9 +1,9 @@
 # [vagrant 1.5.2][vb 4.2.24]
 Vagrant.configure("2") do |config|
 
-  # Ubuntu 13.04
-  config.vm.box = "raring64"
-  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/raring/current/raring-server-cloudimg-amd64-vagrant-disk1.box"
+  # Ubuntu 14.04
+  config.vm.box = "trusty64"
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 
  # Allocate host resources
   config.vm.provider :virtualbox do |vb|

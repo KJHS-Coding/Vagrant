@@ -12,7 +12,7 @@ then
     echo "cd /vagrant" | sudo tee -a ~vagrant/.profile
 
     # For nvm installation below
-    HOMEDIR = '~vagrant'
+    HOMEDIR="/home/vagrant"
 
 else
     # If you are actually deploying this on a server somewhere, then here is
