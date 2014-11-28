@@ -23,12 +23,16 @@ sudo apt-get update
 sudo apt-get -y install build-essential # g++, make, etc.
 sudo apt-get -y install git curl
 
+# MongoDB
+sudo apt-get install -y mongodb-server
+
 # Python
 sudo apt-get -y install python3-setuptools
 sudo apt-get -y install python3-dev
 sudo apt-get -y install python3-pip
 
 sudo pip3 install pymongo
+sudo pip3 install requests requests_oauthlib
 sudo pip3 install tweepy
 
 #numpy
