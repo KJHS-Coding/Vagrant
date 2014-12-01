@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   # Network
   config.vm.network "private_network", ip: "10.10.10.10" #host-only network required for nfs
-  config.vm.network "forwarded_port", guest: 8080, host: 8080 #Python
+  config.vm.network "forwarded_port", guest: 8888, host: 8888 #Python
   config.vm.network "forwarded_port", guest: 27017, host: 27017 #MongoDB
 
   # Vagrant Cachier

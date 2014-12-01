@@ -35,16 +35,16 @@ sudo pip3 install pymongo
 sudo pip3 install requests requests_oauthlib
 sudo pip3 install tweepy
 
-#numpy
 sudo apt-get -y install gfortran
 sudo apt-get -y install python3-nose
 sudo apt-get -y install python3-numpy
 
-#matplotlib
 sudo apt-get -y install python3-matplotlib
-
-#scipy
 sudo apt-get -y install python3-scipy
-
-#pandas
 sudo apt-get -y install python3-pandas
+sudo apt-get -y install ipython3
+sudo apt-get -y install ipython3-notebook
+
+cd nb
+#start the notebook server
+ipython3 notebook  --ip='0.0.0.0'
